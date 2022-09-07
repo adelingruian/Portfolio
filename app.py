@@ -8,9 +8,12 @@ import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+
 bootstrap = Bootstrap(app)
 EMAIL = os.environ.get("EMAIL")
 PASS = os.environ.get("PASS")
+
+
 
 class ContactForm(FlaskForm):
     name = StringField("Name:", validators=[DataRequired()])

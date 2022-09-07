@@ -95,7 +95,8 @@ button:hover {
     border: 1px solid #161E54;
     background-color: white;
     box-shadow: 10px 10px 5px #FF9B6A;
-    margin-bottom: 4%
+    margin-bottom: 4%;
+    transition: 1s;
 }
 
 .project-card:hover {

@@ -13,13 +13,14 @@ bootstrap = Bootstrap(app)
 EMAIL = os.environ.get("EMAIL")
 PASS = os.environ.get("PASS")
 
+app.config['SECRET_KEY'] = "Tractor"
+
 
 
 class ContactForm(FlaskForm):
     name = StringField("Name:", validators=[DataRequired()])
     email = EmailField("Email:", validators=[DataRequired(), Email()])
     message = TextAreaField("Message:", validators=[DataRequired()])
-    submit = SubmitField("Send")
 
 
 @app.route('/', methods=["GET", "POST"])

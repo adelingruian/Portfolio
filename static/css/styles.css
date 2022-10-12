@@ -11,15 +11,17 @@ h2 {
     margin: 5%
 }
 
-section {
-}
 
 i {
     color: #FF9B6A;
-    padding: 0 10px;
     font-size: 1.4rem;
     font-style: normal;
     font-variant: normal;
+}
+
+a {
+    all:unset;
+    cursor: pointer;
 }
 
 ul {
@@ -79,30 +81,66 @@ h1.title-area {
 
 button {
     all: unset;
-    color: #FF9B6A;
-    font-size: 1.4rem;
-    display: block;
-    margin-top: auto;
 }
 
-button:hover {
+.project-button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.project-button {
+    color: #161E54;
+    font-size: 1.4rem;
+    padding: 10px 30px;
+    border-radius: 9999px;
+    border: 6px solid #EEEEEE;
+    box-shadow: -5px -5px 10px rgba(255,255,255, 0.8),
+        5px 5px 10px rgba(0,0,0, 0.25);
+    transition: 0.3s;
+}
+
+.project-button:hover {
     color: #FF5151;
+    box-shadow: -10px -10px 20px rgba(255,255,255, 0.6),
+        1px 1px 5px rgba(0,0,0, 0.3),
+        inset -4px -4px 10px rgba(255,255,255, 0.6),
+        inset 2px 2px 2px rgba(0,0,0, 0.3);
+}
+
+.blue-button {
+    all: unset;
+    color: #EEEEEE;
+    font-size: 1.4rem;
+    padding: 10px 30px;
+    margin: 40px 0;
+    border-radius: 9999px;
+    border: 6px solid #161E54;
+    box-shadow: -5px -5px 10px rgba(35,50,130, 0.8),
+        5px 5px 10px rgba(0,0,0, 0.25);
+    transition: 0.3s;
+    align-self: center;
+}
+
+.blue-button:hover {
+    color: #FF5151;
+    box-shadow: -10px -10px 20px rgba(35,50,130, 0.6),
+        1px 1px 5px rgba(0,0,0, 0.3),
+        inset -4px -4px 10px rgba(35,50,130, 0.6),
+        inset 2px 2px 2px rgba(0,0,0, 0.3);
 }
 
 .project-card {
+    background-color: #EEEEEE;
     color: #161E54;
-    padding: 10px 10px 10px 10px;
-    border: 1px solid #161E54;
-    background-color: white;
-    box-shadow: 10px 10px 5px #FF9B6A;
+    padding: 30px;
+    border-radius: 30px;
+    border: 6px solid #EEEEEE;
+    box-shadow: -10px -10px 20px rgba(255,255,255, 0.8),
+        10px 10px 20px rgba(0,0,0, 0.25);
     margin-bottom: 4%;
-    transition: 1s;
+    transition: 0.3s;
 }
 
-.project-card:hover {
-    transform: translate(4px, 1px);
-    box-shadow: 6px 6px 3px #FF9B6A;
-}
 
 .project-card.p {
     color: #161E54;
@@ -126,14 +164,19 @@ img {
 
 .project-description {
     margin:5px;
+    margin-bottom: 20px;
+}
+
+.small-tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
 }
 
 .small-tech {
     border: 1px solid #88E0EF;
     border-radius: 3px;
-    display: inline;
-    margin: 7px;
-    padding: 2px;
+    padding: 2px 6px;
 }
 
 p.title-area {
@@ -182,10 +225,6 @@ p.title-area {
     color: #FF9B6A;
 }
 
-.download-button {
-    margin-bottom:5%;
-}
-
 
 /*Footer section*/
 #contact {
@@ -214,7 +253,6 @@ p.title-area {
 
 #contact p {
     margin:0;
-    padding: 20px 0;
     color: #88E0EF;
 }
 
